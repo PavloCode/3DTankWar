@@ -1,0 +1,728 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+button,
+button:active,
+button:focus {
+    outline: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    color: #555252;
+    font-size: 14px;
+    line-height: auto;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAI0lEQVQIW2NkwAT/GdHE/gP5jMiCYAGQIpggXAAmiCIAEgQAAE4FBbECyZcAAAAASUVORK5CYII=) #222;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.container {
+    position: relative;
+    width: 320px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/* header */
+
+.page-header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    position: fixed;
+}
+
+.navigation-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    display: none;
+}
+
+.navigation-item {
+    position: relative;
+}
+
+.navigation-link {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: #0adefa;
+    text-transform: uppercase;
+    display: block;
+}
+
+
+/* header-end */
+
+
+/* burger */
+
+.label {
+    position: absolute;
+    color: rgb(10, 222, 250);
+    font-size: 25px;
+}
+
+.burger-button {
+    position: absolute;
+    z-index: 9;
+    padding: 8px;
+    cursor: pointer;
+    right: 0;
+    top: 55px;
+}
+
+
+/*this is where you can chand the color of the buttons*/
+
+.burger-button span {
+    width: 40px;
+    border: 2px solid rgb(10, 222, 250);
+    display: block;
+    border-radius: 22px;
+    transition: 2s;
+}
+
+.burger-top,
+.burger-bottom {
+    position: absolute;
+}
+
+.burger-top {
+    top: -02px;
+}
+
+.burger-bottom {
+    bottom: -02px;
+}
+
+
+/* make sure this has the same top as the burger button has padding*/
+
+.burger-menu {
+    display: flex;
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    right: 0;
+    bottom: 100vh;
+    background: url('../img/pattern/pattern4.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #020202;
+    padding: 5px;
+    z-index: 8;
+    transition: 1s;
+    align-content: space-around;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.burger-link {
+    margin-bottom: 50px;
+}
+
+.burger-menu.active {
+    top: 0;
+    bottom: 0;
+}
+
+.burger-menu a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 300;
+    color: rgb(10, 222, 250);
+    font-family: 'Alegreya Sans SC', sans-serif;
+    display: block;
+    padding: 5px 15px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+
+/* animation */
+
+.animation-top {
+    position: absolute;
+    top: 8px;
+    transform: rotateZ(45deg);
+}
+
+.animation-mid {
+    transform: rotateZ(45deg);
+}
+
+.animation-bot {
+    position: absolute;
+    bottom: 8px;
+    transform: rotateZ(-45deg);
+}
+
+
+/* burger-end */
+
+.scroll-section .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+ ::-webkit-scrollbar {
+    display: none;
+}
+
+.wrapp {
+    display: none;
+    width: 900px;
+    height: 300px;
+    position: relative;
+}
+
+.scroll-section {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAI0lEQVQIW2NkwAT/GdHE/gP5jMiCYAGQIpggXAAmiCIAEgQAAE4FBbECyZcAAAAASUVORK5CYII=) #222;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-size: cover; */
+    background-size: contain;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    position: relative;
+    background-image: url('../img/circle/circle7.png');
+}
+
+.scroll-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 300px;
+    height: 900px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 25px;
+    transform: rotate(-90deg) translateY(-300px);
+    transform-origin: right top;
+    background-color: rgba(220, 220, 220, 0.041);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+    border-top: 1px solid rgba(0, 0, 0, 0.733);
+    border-right: 1px solid rgba(255, 255, 255, 0.123);
+    border-left: 1px solid rgba(0, 0, 0, 0.733);
+}
+
+.scroll-item {
+    margin-top: 215px;
+    position: relative;
+}
+
+.scroll-link {
+    display: block;
+    transform: rotate(90deg);
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    color: rgb(85, 82, 82);
+    transition: 0.5s;
+}
+
+.scroll-link:hover {
+    transform: scale(1.2) rotate(90deg);
+}
+
+
+/* //////////////////// */
+
+.scroll-name {
+    font-size: 14px;
+    opacity: 0;
+    position: absolute;
+    bottom: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 1.3s;
+    background-color: #ffff;
+    border-radius: 25px;
+    padding: 1px 5px;
+}
+
+.scroll-link:hover .scroll-name {
+    opacity: 1;
+}
+
+
+/* section */
+
+.title {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 30px;
+    background-color: rgb(85, 82, 82);
+    border-radius: 15px;
+    padding: 2px 15px;
+    color: rgb(255, 255, 255);
+    position: relative;
+    z-index: 20;
+}
+
+.wrapp-title {
+    display: inline-block;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+}
+
+.title::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 17px solid transparent;
+    border-right: 17px solid transparent;
+    border-top: 20px solid rgb(85, 82, 82);
+    position: absolute;
+    z-index: -1;
+    right: 5px;
+    bottom: -10px;
+}
+
+.section {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.section .container {
+    min-height: 100vh;
+    border-left: 1px solid rgba(0, 0, 0, 0.041);
+    border-right: 1px solid rgba(0, 0, 0, 0.041);
+}
+
+.wrapp-content {
+    margin: 0 auto;
+}
+
+.wrapp-content-mod {
+    padding-bottom: 100px;
+}
+
+.section-description {
+    padding: 0;
+    margin: 0;
+    color: rgb(85, 82, 82);
+    text-align: justify;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+
+/* image section */
+
+.game-image {
+    width: 290px;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.application-image {
+    width: 290px;
+    margin: 0 auto;
+}
+
+.music-image {
+    border-radius: 5px;
+    margin: 0 auto;
+    width: 180px;
+}
+
+.application-bt {
+    color: rgba(201, 201, 201, 0.863);
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: 1.4s;
+}
+
+.wrapp-description {
+    text-align: center;
+    /* padding: 10px; */
+}
+
+.tehnology {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.tehnology li {
+    margin-right: 10px;
+}
+
+.tehnology p {
+    color: rgba(201, 201, 201, 0.863);
+}
+
+.section-footer {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAI0lEQVQIW2NkwAT/GdHE/gP5jMiCYAGQIpggXAAmiCIAEgQAAE4FBbECyZcAAAAASUVORK5CYII=) #222;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-title {
+    padding: 0;
+    margin: 0;
+    color: rgb(255, 255, 255);
+    padding: 20px 0px;
+}
+
+.player-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.player-item {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.play::before {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 70px;
+    background: url('../img/button/play-white.png');
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.stop::before {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 70px;
+    background: url('../img/button/stop-active.png');
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* cover music track */
+
+.one-track {
+    background: url('../img/audio-cover/happy.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.one-track::after {
+    content: 'Happy';
+    font-size: 17px;
+    color: #ffffff;
+    position: absolute;
+    top: 80%;
+}
+
+.two-track {
+    background: url('../img/audio-cover/evening.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.two-track::after {
+    content: 'Evening';
+    font-size: 17px;
+    color: #ffffff;
+    position: absolute;
+    top: 80%;
+}
+
+.three-track {
+    background: url('../img/audio-cover/animal-daylight-dog-1498925.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.three-track::after {
+    content: 'Friends';
+    font-size: 17px;
+    color: #ffffff;
+    position: absolute;
+    top: 80%;
+}
+
+.four-track {
+    background: url('../img/audio-cover/party.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.four-track::after {
+    content: 'Party';
+    font-size: 17px;
+    color: #ffffff;
+    position: absolute;
+    top: 80%;
+}
+
+.five-track {
+    background: url('../img/audio-cover/motivation.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.five-track::after {
+    content: 'Motivation';
+    font-size: 17px;
+    color: #ffffff;
+    position: absolute;
+    top: 80%;
+}
+
+.six-track {
+    background: url('../img/audio-cover/party2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.six-track::after {
+    content: 'Inspiration';
+    font-size: 17px;
+    color: #ffffff;
+    position: absolute;
+    top: 80%;
+}
+
+.seven-track {
+    background: url('../img/audio-cover/celebration-colorful-colourful-1684187.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.seven-track::after {
+    content: 'Fun';
+    font-size: 17px;
+    color: #ffffff;
+    position: absolute;
+    top: 80%;
+}
+
+.eight-track {
+    background: url('../img/audio-cover/adults-black-and-white-casual-1374542.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.eight-track::after {
+    content: 'Lounge';
+    font-size: 17px;
+    color: #ffffff;
+    position: absolute;
+    top: 80%;
+}
+
+
+/* end cover */
+
+.player-title {
+    color: #ffff;
+    font-size: 17px;
+    position: absolute;
+    bottom: 0;
+}
+
+.contacts {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.wrapp-contacts {
+    margin: 0 auto;
+}
+
+.contacts-date {
+    font-size: 27px;
+}
+
+.contacts-social {
+    padding: 0;
+    margin: 0;
+    width: 200px;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.contacts-social a {
+    text-decoration: none;
+    color: rgb(85, 82, 82);
+}
+
+.contacts-item {
+    border-bottom: 1px solid rgba(85, 82, 82, 0.062);
+    margin-bottom: 20px;
+}
+
+
+/* media */
+
+@media(min-width:768px) {
+    .container {
+        width: 600px;
+    }
+    .label {
+        display: none;
+    }
+    .wrapp-title {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+    .navigation-list {
+        display: flex;
+    }
+    .wrap-burger {
+        display: none;
+    }
+    .wrapp {
+        display: block;
+    }
+    .scroll-list {
+        width: 300px;
+        height: 600px;
+    }
+    .wrapp {
+        width: 600px;
+        height: 300px;
+        position: absolute;
+    }
+    .scroll-item {
+        margin-top: 130px;
+    }
+    .section-description {
+        width: 400px;
+    }
+    .player-list {
+        width: 400px;
+        margin: 0 auto;
+    }
+    .player-item {
+        width: 190px;
+        height: 190px;
+    }
+    .wrapp-content-cont {
+        width: 400px;
+    }
+    .game-image {
+        width: 350px;
+    }
+    .music-image {
+        width: 220px;
+    }
+}
+
+@media(min-width:1170px) {
+    .container {
+        width: 900px;
+    }
+    .scroll-list {
+        width: 300px;
+        height: 900px;
+    }
+    .wrapp {
+        width: 900px;
+        height: 300px;
+        position: absolute;
+    }
+    .scroll-item {
+        margin-top: 215px;
+    }
+    .wrapp-content {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 50px;
+    }
+    .wrapp-description {
+        padding-bottom: 0px;
+    }
+    .player-list {
+        width: 100%;
+        padding-bottom: 100px;
+    }
+    .player-item {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 30px;
+    }
+    .game-image {
+        width: 390px;
+    }
+    .music-image {
+        width: 260px;
+    }
+    .tehnology {
+        padding-bottom: 20px;
+    }
+}
