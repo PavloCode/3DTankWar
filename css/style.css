@@ -607,6 +607,10 @@ html {
     color: rgb(85, 82, 82);
 }
 
+.contacts-date a {
+    color: rgb(85, 82, 82);
+}
+
 .contacts-social {
     padding: 0;
     margin: 0;
